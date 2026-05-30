@@ -15,7 +15,7 @@ try {
                 throw new Exception("Debe ingresar un nombre");
             }
             
-            $archivo = fopen(Asistentes.txt "a");
+            $archivo = fopen($nombreArchivo "a");
 
             if (!$archivo) {
                 throw new Exception("No se pudo abrir el archivo.");
