@@ -28,7 +28,8 @@ try {
             $resultado = "Nombre guardado correctamente";
         }
 
-    }catch (Exception $e) {
+    } catch (Exception $e) {
         echo "Ocurrio un error: " . $e->getMessage();
     }// catch
+}
 ?>
