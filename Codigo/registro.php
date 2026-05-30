@@ -5,8 +5,6 @@
 // Nombre del archivo donde se guradaran los nombres 
 $nombreArchivo = "Asistentes.txt";
 
-try {
-  
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         try {
             $nombre = trim($_POST['nombre']);
@@ -15,7 +13,7 @@ try {
                 throw new Exception("Debe ingresar un nombre");
             }
             
-            $archivo = fopen($nombreArchivo "a");
+            $archivo = fopen($nombreArchivo, "a");
 
             if (!$archivo) {
                 throw new Exception("No se pudo abrir el archivo.");
@@ -25,8 +23,7 @@ try {
 
             fclose($archivo);
 
-            $resultado = "Nombre guardado correctamente";
-        }
+            echo "Nombre guardado correctamente";
 
     } catch (Exception $e) {
         echo "Ocurrio un error: " . $e->getMessage();
